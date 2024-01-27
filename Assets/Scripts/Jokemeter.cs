@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +9,15 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private Image jokemeterImage;
 
     // Update is called once per frame
-    public void CahngeJokeMeterValue(float currentJokeValue)
+    void Update()
     {
-        jokeMeterValue += currentJokeValue;
+        ChangeCahngeJokeMeterValue(1);
+    }
+
+    public void ChangeCahngeJokeMeterValue(int currentJokeValue)
+    {
+        //Activate next Line in buildt
+        //jokeMeterValue += currentJokeValue;
         if (jokeMeterValue > jokeMeterMaxValue)
         {
             jokeMeterValue = jokeMeterMaxValue;
