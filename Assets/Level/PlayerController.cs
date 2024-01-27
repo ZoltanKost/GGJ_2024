@@ -2,21 +2,38 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private InventoryHandler inventoryHandler;
+    [SerializeField] private GameObject InventoryUI;
+    [SerializeField] private Transform collect_PopUp;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float movementForce;
-    [SerializeField] GameObject Inventory;
+    [SerializeField] KeyCode pickUp;
+    [SerializeField] KeyCode inventoryOpen;
+    [SerializeField] float radius;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        collect_PopUp.gameObject.SetActive(false);
+        if (Input.GetKeyDown(inventoryOpen))
         {
-            if (!Inventory.activeSelf)
+            if (!InventoryUI.activeSelf)
             {
-                Inventory.SetActive(true);
+                InventoryUI.SetActive(true);
             }
             else
             {
-                Inventory.SetActive(false);
+                InventoryUI.SetActive(false);
+            }
+        }
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,radius);
+        foreach(Collider2D collider in colliders)
+        {
+            if(collider.TryGetComponent(out Collectable component))
+            {
+                collect_PopUp.gameObject.SetActive(true);
+                if(Input.GetKeyDown(pickUp)){
+                    inventoryHandler.AddToInventory(component.GetSO());
+                }
             }
         }
     }
