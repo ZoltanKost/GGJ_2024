@@ -7,15 +7,13 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private float jokeMeterMaxValue;
     [SerializeField] private Image jokemeterImage;
 
-    private void JokeMeterValue(float currentJokeValue)
+    // Update is called once per frame
+    void Update()
     {
-        jokeMeterValue += currentJokeValue;
-        float Value = (float)jokeMeterValue / jokeMeterMaxValue;
-        if (Value > 1)
+        if (jokeMeterValue < 100)
         {
-            Value = 1;
+            jokeMeterValue += 1;
         }
-
-        jokemeterImage.rectTransform.anchorMax = new Vector2(jokemeterImage.rectTransform.anchorMax.x, Value);
+        jokemeterImage.rectTransform.anchorMax = new Vector2(1f, (float)jokeMeterValue/jokeMeterMaxValue);
     }
 }
