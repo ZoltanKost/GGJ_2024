@@ -4,7 +4,7 @@ public class InventoryHandler : MonoBehaviour
 {
     [SerializeField] private DragScript prefab;
     [SerializeField] private DropScript[] slots;
-    [SerializeField] private Canvas canvas;
+    [SerializeField] private Transform InventoryUI;
     private int currentSlot = 0;
     private DragScript currentPiece;
     [SerializeField] private DropScript[] Calculator_Footer;
@@ -19,9 +19,9 @@ public class InventoryHandler : MonoBehaviour
     }
 
     public void AddToInventory(JokePieceSO jokePiece){
-        DragScript joke = Instantiate(prefab, canvas.transform);
+        InventoryUI.gameObject.SetActive(true);
+        DragScript joke = Instantiate(prefab, InventoryUI);
         DropScript slot = slots[currentSlot];
-        joke.transform.position = slot.transform.position;
         joke.SetJokePiece(jokePiece);
         joke.SetParentSlot(slot);
         currentSlot++;
@@ -29,6 +29,7 @@ public class InventoryHandler : MonoBehaviour
         slot.OnJokeDropped += OnJokeDropped;
         joke.OnDragBegin += OnDragBegin;
         joke.OnDragEnd += OnDragEnd;
+        InventoryUI.gameObject.SetActive(false);
     }
     void OnDragBegin(object sender, DragScript script){
         Debug.Log("Drag begun!");
