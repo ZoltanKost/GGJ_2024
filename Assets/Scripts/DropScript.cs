@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropScript : MonoBehaviour,IDropHandler
+public class DropScript : MonoBehaviour, IDropHandler
 {
     public EventHandler<DropScript> OnJokeDropped;
     public JokePieceSO jokePieceSO{get;private set;}
@@ -11,9 +11,16 @@ public class DropScript : MonoBehaviour,IDropHandler
     void Awake(){
         image = GetComponent<Image>();
     }
-    void IDropHandler.OnDrop(PointerEventData eventData)
+    public virtual void OnDrop(PointerEventData eventData)
     {
-        OnJokeDropped?.Invoke(this,this);
         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition=GetComponent<RectTransform>().anchoredPosition;
+        OnJokeDropped?.Invoke(this,this);
+    }
+    public void SetJokeSO(JokePieceSO so){
+        jokePieceSO = so;
+        Debug.Log(name + " Just set SO!");
+    }
+    public JokePieceSO GetJokeSO(){
+        return jokePieceSO;
     }
 }
