@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c25cd8129a5c094b8d46bf448b9803b, type: 3}
   m_Name: Test_Joke 1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  isFirst: 0
-  JOKE_ID: 0
-  compatible: []
-  points: 
+  text: then the second one.
+  compatible:
+  - {fileID: 11400000, guid: 6d12fd0628a35ec40b26dd2471cd4f58, type: 2}
+  points: 0a000000

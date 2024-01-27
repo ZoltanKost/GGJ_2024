@@ -1,21 +1,22 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDragHandler
 {
-    public EventHandler<DragScript> OnJokeDrop;
     public EventHandler<DragScript> OnJokeDrag;
+    public EventHandler<DragScript> OnEndJokeDrag;
     private DropScript currentSlot;
-    Image image;
+    [SerializeField] private Image image;
+    [SerializeField] private TMP_Text text;
     RectTransform rec;
     Canvas canvas;
     public JokePieceSO jokePieceSO{get;private set;}
 
     void Awake()
     {
-        image = GetComponent<Image>();
         rec = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
     }
@@ -34,19 +35,23 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)
     {
         //Should check if mouse covered DROP
-        OnJokeDrop?.Invoke(this,this);
+        OnEndJokeDrag?.Invoke(this,this);
         image.raycastTarget = true;
         // img.enabled = true;
     }
     public void SetJokePiece(JokePieceSO piece){
         jokePieceSO = piece;
         Debug.Log(piece != null);
-        image.sprite = jokePieceSO.sprite;
+        text.text = jokePieceSO.text;
     }
     public JokePieceSO GetJokeSO(){
         return jokePieceSO;
     }
     public void SetParentSlot(DropScript parent){
-        currentSlot = parent; 
+        currentSlot = parent;
+        ResetPosition();
+    }
+    public void ResetPosition(){
+        rec.anchoredPosition = currentSlot.GetComponent<RectTransform>().anchoredPosition;
     }
 }

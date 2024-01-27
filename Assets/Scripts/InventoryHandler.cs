@@ -8,10 +8,10 @@ public class InventoryHandler : MonoBehaviour
     private int currentSlot = 0;
     private DragScript currentPiece;
     [SerializeField] private DropScript[] Calculator_Footer;
-    [SerializeField] private JokePieceSO jokePieceSO_placeholder;
+    [SerializeField] private JokePieceSO[] jokePieces; 
     void Awake(){
-        for(int i = 0; i < 4; i++){
-            AddToInventory(jokePieceSO_placeholder);
+        for(int i = 0; i < jokePieces.Length; i++){
+            AddToInventory(jokePieces[i]);
         }
         for(int i = 0; i < Calculator_Footer.Length; i++){
             Calculator_Footer[i].OnJokeDropped += OnJokeDropped;
@@ -23,10 +23,12 @@ public class InventoryHandler : MonoBehaviour
         DropScript slot = slots[currentSlot];
         joke.transform.position = slot.transform.position;
         joke.SetJokePiece(jokePiece);
+        joke.SetParentSlot(slot);
         currentSlot++;
         slot.gameObject.SetActive(true);
         slot.OnJokeDropped += OnJokeDropped;
-        joke.OnJokeDrag += OnJokeDrag; 
+        joke.OnJokeDrag += OnJokeDrag;
+        joke.OnEndJokeDrag += OnEndJokeDrag;
     }
     void OnJokeDrag(object sender, DragScript script){
         Debug.Log("Drag begun!");
@@ -34,8 +36,10 @@ public class InventoryHandler : MonoBehaviour
     }
     void OnJokeDropped(object sender, DropScript dropScript){
         dropScript.SetJokeSO(currentPiece.GetJokeSO());
-        currentPiece.SetParentSlot(null);
         currentPiece.SetParentSlot(dropScript);
         currentPiece = null;
     } 
+    void OnEndJokeDrag(object sender, DragScript script){
+        script.ResetPosition();
+    }
 }
