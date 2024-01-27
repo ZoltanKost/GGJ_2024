@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c25cd8129a5c094b8d46bf448b9803b, type: 3}
+  m_Name: Joke_5_1
+  m_EditorClassIdentifier: 
+  text: "Wie nennt man einen B\xE4ren, der Laut Kugel schreit?"
+  audio: {fileID: 8300000, guid: b5900dc6e67ea79428dbe113ac0eb157, type: 3}
+  data:
+  - compatiblePiece: {fileID: 11400000, guid: 5c5331ce5dc21004d854fe6a52daed24, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 89e1673eabc3ae44c98586c3a88000a5, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 8006eb31610ad1245b38ddc1d51a140c, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 8b60400b2879d0949ba02ff72762e027, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 119fc4ad0971eba47ac08a9176a9a570, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: fb43438fe9e72e34f90091b5ebf4a1a6, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 51df95492c7a86343a11c843168ce0ee, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 90c4289241636ef4ab6fa343d51e7201, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: fc4f7cfa409ab7d44907f2b262c059c7, type: 3}

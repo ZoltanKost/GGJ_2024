@@ -12,6 +12,7 @@ public class JokePieceSO : ScriptableObject{
     }
     public String text;
     private Dictionary<JokePieceSO, int>  _jokePiece_Points;
+    [SerializeField] AudioClip audio;
     [SerializeField] private List<ComboData> data;
     // [SerializeField] private List<int> points;
     public int GetScore(JokePieceSO so){
