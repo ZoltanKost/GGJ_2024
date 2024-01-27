@@ -1,25 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jokemeter : MonoBehaviour
 {
     [SerializeField] private float jokeMeterValue;
-    [Serialziefield] private GameObject jokemeterImage;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float jokeMeterMaxValue;
+    [SerializeField] private Image jokemeterImage;
 
     // Update is called once per frame
     void Update()
     {
-        if (JokeMeterValue < 100)
+        if (jokeMeterValue < 100)
         {
             jokeMeterValue += 1;
         }
-        jokemeterImage.Transform.height = jokeMeterValue;
+        jokemeterImage.rectTransform.anchorMax = new Vector2(1f, (float)jokeMeterValue/jokeMeterMaxValue);
     }
 }
