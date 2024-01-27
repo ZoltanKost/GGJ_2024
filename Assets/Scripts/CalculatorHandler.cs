@@ -19,6 +19,7 @@ public class CalculatorHandler : MonoBehaviour
         }
         joke1 = footer1.GetJokeSO();
         joke2 = footer2.GetJokeSO();
+        if(!joke1.HasScore(joke2)) return;
         OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs{
             value = joke1.GetScore(joke2), 
             audioClip = joke1.GetAudio(joke2)
