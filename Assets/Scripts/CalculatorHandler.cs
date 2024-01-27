@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class CalculatorHandler : MonoBehaviour
 {
-    public EventHandler<int> OnJokeSubmitted;
+    public EventHandler<OnJokeSubmittedEventArgs> OnJokeSubmitted;
+    public class OnJokeSubmittedEventArgs{
+        public int value;
+        public AudioClip audioClip;
+    }
     [SerializeField] private DropScript footer1;
     [SerializeField] private DropScript footer2;
     [SerializeField] private AudioManager audioManager;
@@ -13,11 +17,11 @@ public class CalculatorHandler : MonoBehaviour
         if(!footer1.occupied || !footer2.occupied){
             return;
         }
-        audioManager.ChangeClip(0);
         joke1 = footer1.GetJokeSO();
         joke2 = footer2.GetJokeSO();
-        int num = joke1.GetScore(joke2);
-        OnJokeSubmitted?.Invoke(this, num);
-         Debug.Log("You gain " + num);
+        OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs{
+            value = joke1.GetScore(joke2), 
+            audioClip = joke1.GetAudio(joke2)
+        });
     }
 }
