@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,14 +9,14 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     public EventHandler<DragScript> OnJokeDrag;
     public EventHandler<DragScript> OnEndJokeDrag;
     private DropScript currentSlot;
-    Image image;
+    [SerializeField] private Image image;
+    [SerializeField] private TMP_Text text;
     RectTransform rec;
     Canvas canvas;
     public JokePieceSO jokePieceSO{get;private set;}
 
     void Awake()
     {
-        image = GetComponent<Image>();
         rec = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
     }
@@ -41,7 +42,7 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     public void SetJokePiece(JokePieceSO piece){
         jokePieceSO = piece;
         Debug.Log(piece != null);
-        image.sprite = jokePieceSO.sprite;
+        text.text = jokePieceSO.text;
     }
     public JokePieceSO GetJokeSO(){
         return jokePieceSO;

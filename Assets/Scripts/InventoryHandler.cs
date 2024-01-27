@@ -8,10 +8,10 @@ public class InventoryHandler : MonoBehaviour
     private int currentSlot = 0;
     private DragScript currentPiece;
     [SerializeField] private DropScript[] Calculator_Footer;
-    [SerializeField] private JokePieceSO jokePieceSO_placeholder;
+    [SerializeField] private JokePieceSO[] jokePieces; 
     void Awake(){
-        for(int i = 0; i < 4; i++){
-            AddToInventory(jokePieceSO_placeholder);
+        for(int i = 0; i < jokePieces.Length; i++){
+            AddToInventory(jokePieces[i]);
         }
         for(int i = 0; i < Calculator_Footer.Length; i++){
             Calculator_Footer[i].OnJokeDropped += OnJokeDropped;
