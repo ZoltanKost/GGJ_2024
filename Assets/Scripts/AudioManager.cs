@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource m_AudioSource;
-    public AudioClip[] ricochet;
-    
-    public void ChangeClip(int clipValue)
+    [SerializeField] private CalculatorHandler calculatorHandler;
+    public void Awake()
+    {
+        calculatorHandler.OnJokeSubmitted += ChangeClip;
+    }        
+    public void ChangeClip(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)
     {
         AudioSource source = m_AudioSource;
-        source.clip = ricochet[clipValue];
+        source.clip = e.audioClip;
         source.Play();
     }
 }
