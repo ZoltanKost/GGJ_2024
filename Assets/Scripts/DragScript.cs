@@ -1,0 +1,44 @@
+using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDragHandler
+{
+    public EventHandler<DragScript> OnJokeDrop;
+    public EventHandler<DragScript> OnJokeDrag;
+    Image image;
+    RectTransform rec;
+    Canvas canvas;
+    public JokePieceSO jokePieceSO{get;private set;}
+
+    void Awake()
+    {
+        image = GetComponent<Image>();
+        rec = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
+    }
+    
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
+    {
+        OnJokeDrag?.Invoke(this,this);
+        // img.enabled = false;
+        image.raycastTarget = false;
+    }
+    void IDragHandler.OnDrag(PointerEventData eventData)
+    {
+        rec.anchoredPosition+=eventData.delta/canvas.scaleFactor;
+    }
+
+    void IEndDragHandler.OnEndDrag(PointerEventData eventData)
+    {
+        //Should check if mouse covered DROP
+        OnJokeDrop?.Invoke(this,this);
+        image.raycastTarget = true;
+        // img.enabled = true;
+    }
+    public void SetJokePiece(JokePieceSO piece){
+        jokePieceSO = piece;
+        image.sprite = jokePieceSO.sprite;
+    }
+}
