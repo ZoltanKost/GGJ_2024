@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
                 collect_PopUp.gameObject.SetActive(true);
                 if(Input.GetKeyDown(pickUp)){
                     inventoryHandler.AddToInventory(component.GetSO());
+                    component.gameObject.SetActive(false);
                 }
             }
         }
