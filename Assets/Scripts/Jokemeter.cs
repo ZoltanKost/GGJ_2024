@@ -8,7 +8,7 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private Image jokemeterImage;
 
     // Update is called once per frame
-    void CahngeJokeMeterValue(float currentJokeValue)
+    public void CahngeJokeMeterValue(float currentJokeValue)
     {
         jokeMeterValue += currentJokeValue;
         if (jokeMeterValue > jokeMeterMaxValue)
