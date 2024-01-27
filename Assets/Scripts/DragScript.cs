@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDragHandler
 {
-    public EventHandler<DragScript> OnJokeDrag;
-    public EventHandler<DragScript> OnEndJokeDrag;
+    public EventHandler<DragScript> OnDragBegin;
+    public EventHandler<DragScript> OnDragEnd;
     private DropScript currentSlot;
     [SerializeField] private Image image;
     [SerializeField] private TMP_Text text;
@@ -23,7 +23,8 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
-        OnJokeDrag?.Invoke(this,this);
+        currentSlot.ResetJokeObject();
+        OnDragBegin?.Invoke(this,this);
         // img.enabled = false;
         image.raycastTarget = false;
     }
@@ -35,7 +36,7 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)
     {
         //Should check if mouse covered DROP
-        OnEndJokeDrag?.Invoke(this,this);
+        OnDragEnd?.Invoke(this,this);
         image.raycastTarget = true;
         // img.enabled = true;
     }
@@ -48,6 +49,7 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
         return jokePieceSO;
     }
     public void SetParentSlot(DropScript parent){
+        currentSlot?.ResetJokeObject();
         currentSlot = parent;
         ResetPosition();
     }
