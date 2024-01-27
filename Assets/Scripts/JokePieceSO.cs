@@ -11,21 +11,27 @@ public class JokePieceSO : ScriptableObject{
         public  AudioClip clip; 
     }
     public String text;
-    private Dictionary<JokePieceSO, int>  _jokePiece_Points;
     [SerializeField] AudioClip audio;
     [SerializeField] private List<ComboData> data;
-    // [SerializeField] private List<int> points;
+
+    private Dictionary<JokePieceSO, ComboData>  _jokePiece_data;
     public int GetScore(JokePieceSO so){
-        if(_jokePiece_Points == null){
+        if(_jokePiece_data == null){
             Generate();
         }
-        return _jokePiece_Points[so];
-    }   
-    public Dictionary<JokePieceSO, int> Generate(){
-        _jokePiece_Points = new();
-        for(int i = 0; i < data.Count; i++){
-            _jokePiece_Points.Add(data[i].compatiblePiece,data[i].score);
+        return _jokePiece_data[so].score;
+    }
+    public AudioClip GetAudio(JokePieceSO so){
+        if(_jokePiece_data == null){
+            Generate();
         }
-        return _jokePiece_Points;
+        return _jokePiece_data[so].clip;
+    }
+    public Dictionary<JokePieceSO, ComboData> Generate(){
+        _jokePiece_data = new();
+        for(int i = 0; i < data.Count; i++){
+            _jokePiece_data.Add(data[i].compatiblePiece,data[i]);
+        }
+        return _jokePiece_data;
     }
 }

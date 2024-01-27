@@ -1639,8 +1639,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d06ff3cebe9b0a49a5dbd70d658190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryHandler: {fileID: 0}
+  InventoryUI: {fileID: 0}
+  collect_PopUp: {fileID: 0}
   rb: {fileID: 1659489289074776188}
   movementForce: 340
+  pickUp: 0
+  inventoryOpen: 0
+  radius: 0.5
+  dialogBox: {fileID: 0}
 --- !u!50 &1659489289074776188
 Rigidbody2D:
   serializedVersion: 4
