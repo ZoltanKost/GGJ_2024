@@ -368,7 +368,7 @@ MonoBehaviour:
   - {fileID: 327333965}
   - {fileID: 1120072900}
   - {fileID: 231087526}
-  InventoryUI: {fileID: 0}
+  InventoryUI: {fileID: 652088907}
   Calculator_Footer:
   - {fileID: 1296158807}
   - {fileID: 192759693}
