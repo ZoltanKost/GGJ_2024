@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     public void ChangeClip(int clipValue)
     {
         AudioSource source = m_AudioSource;
-        source.clip = ricochet[0];
+        source.clip = ricochet[clipValue];
         source.Play();
     }
 }

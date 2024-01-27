@@ -902,10 +902,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1659314454}
     m_Modifications:
-    - target: {fileID: 10861406824589946, guid: c4b2cbef3435ce7498fa29fb220b5873, type: 3}
-      propertyPath: playerController
-      value: 
-      objectReference: {fileID: 1752038727}
     - target: {fileID: 4045485321037190721, guid: c4b2cbef3435ce7498fa29fb220b5873, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1303,17 +1299,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1752038727 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3243517532346170320, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
-  m_PrefabInstance: {fileID: 49550332}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d06ff3cebe9b0a49a5dbd70d658190e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1956609722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6043611793098738462, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
