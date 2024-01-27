@@ -144,6 +144,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 652088906}
     - target: {fileID: 3243517532346170320, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 3243517532346170320, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: InventoryUI
       value: 
       objectReference: {fileID: 652088906}
@@ -1107,6 +1111,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4045485321037190721, guid: c4b2cbef3435ce7498fa29fb220b5873, type: 3}
   m_PrefabInstance: {fileID: 1153763714}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1153763716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 10861406824589946, guid: c4b2cbef3435ce7498fa29fb220b5873, type: 3}
+  m_PrefabInstance: {fileID: 1153763714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c955eef7266f90c4db73a6f6503fe6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1204295979 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5876304091708795275, guid: 65d6ea3cf979ccd48a57df23c1031d46, type: 3}
