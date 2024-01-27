@@ -7,6 +7,7 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
 {
     public EventHandler<DragScript> OnJokeDrop;
     public EventHandler<DragScript> OnJokeDrag;
+    private DropScript currentSlot;
     Image image;
     RectTransform rec;
     Canvas canvas;
@@ -39,6 +40,13 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     }
     public void SetJokePiece(JokePieceSO piece){
         jokePieceSO = piece;
+        Debug.Log(piece != null);
         image.sprite = jokePieceSO.sprite;
+    }
+    public JokePieceSO GetJokeSO(){
+        return jokePieceSO;
+    }
+    public void SetParentSlot(DropScript parent){
+        currentSlot = parent; 
     }
 }
