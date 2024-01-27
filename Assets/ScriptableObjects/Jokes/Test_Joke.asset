@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Test_Joke
   m_EditorClassIdentifier: 
   text: 'First part of the joke, '
-  compatible:
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: 0a2d09e113a56cb47bf0bfc2ea3faf3f, type: 2}
-  points: 64000000e8030000
+  data:
+  - compatiblePiece: {fileID: 11400000}
+    score: 10
+    clip: {fileID: 8300000, guid: bd3e0fb79bcf886499859e998461edbc, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 0a2d09e113a56cb47bf0bfc2ea3faf3f, type: 2}
+    score: 10
+    clip: {fileID: 8300000, guid: bd3e0fb79bcf886499859e998461edbc, type: 3}
