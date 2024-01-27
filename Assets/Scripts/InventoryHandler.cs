@@ -23,10 +23,12 @@ public class InventoryHandler : MonoBehaviour
         DropScript slot = slots[currentSlot];
         joke.transform.position = slot.transform.position;
         joke.SetJokePiece(jokePiece);
+        joke.SetParentSlot(slot);
         currentSlot++;
         slot.gameObject.SetActive(true);
         slot.OnJokeDropped += OnJokeDropped;
-        joke.OnJokeDrag += OnJokeDrag; 
+        joke.OnJokeDrag += OnJokeDrag;
+        joke.OnEndJokeDrag += OnEndJokeDrag;
     }
     void OnJokeDrag(object sender, DragScript script){
         Debug.Log("Drag begun!");
@@ -34,8 +36,10 @@ public class InventoryHandler : MonoBehaviour
     }
     void OnJokeDropped(object sender, DropScript dropScript){
         dropScript.SetJokeSO(currentPiece.GetJokeSO());
-        currentPiece.SetParentSlot(null);
         currentPiece.SetParentSlot(dropScript);
         currentPiece = null;
     } 
+    void OnEndJokeDrag(object sender, DragScript script){
+        script.ResetPosition();
+    }
 }

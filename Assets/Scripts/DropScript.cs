@@ -13,7 +13,7 @@ public class DropScript : MonoBehaviour, IDropHandler
     }
     public virtual void OnDrop(PointerEventData eventData)
     {
-        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition=GetComponent<RectTransform>().anchoredPosition;
+        //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition=GetComponent<RectTransform>().anchoredPosition;
         OnJokeDropped?.Invoke(this,this);
     }
     public void SetJokeSO(JokePieceSO so){
