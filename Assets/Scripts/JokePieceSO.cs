@@ -19,6 +19,7 @@ public class JokePieceSO : ScriptableObject{
         if(_jokePiece_data == null){
             Generate();
         }
+        if(!_jokePiece_data.ContainsKey(so)) return 0;
         return _jokePiece_data[so].score;
     }
     public AudioClip GetAudio(JokePieceSO so){
@@ -33,5 +34,11 @@ public class JokePieceSO : ScriptableObject{
             _jokePiece_data.Add(data[i].compatiblePiece,data[i]);
         }
         return _jokePiece_data;
+    }
+    public bool HasScore(JokePieceSO so){
+        if(_jokePiece_data == null){
+            Generate();
+        }
+        return _jokePiece_data.ContainsKey(so);
     }
 }
