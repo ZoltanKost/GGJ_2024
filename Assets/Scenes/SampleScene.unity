@@ -1097,6 +1097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jokemeter
       objectReference: {fileID: 0}
+    - target: {fileID: 127790980944321474, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5053406849407286412, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
       propertyPath: m_OverridePixelPerfect
       value: 0
@@ -1421,6 +1425,10 @@ PrefabInstance:
     - target: {fileID: 7144484967639881587, guid: 65d6ea3cf979ccd48a57df23c1031d46, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144484967639881587, guid: 65d6ea3cf979ccd48a57df23c1031d46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
