@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 public class CalculatorHandler : MonoBehaviour
 {
-    
+    public EventHandler<int> OnJokeSubmitted;
     [SerializeField] private DropScript footer1;
     [SerializeField] private DropScript footer2;
     [SerializeField] private AudioManager audioManager;
@@ -15,8 +16,8 @@ public class CalculatorHandler : MonoBehaviour
         audioManager.ChangeClip(0);
         joke1 = footer1.GetJokeSO();
         joke2 = footer2.GetJokeSO();
-        // int num = joke1.jokePiece_Points[joke2];
-        // num += joke2.jokePiece_Points[joke1];
-         Debug.Log("You gain " + joke1.ToString() + " and " + joke2.ToString());
+        int num = joke1.GetScore(joke2);
+        OnJokeSubmitted?.Invoke(this, num);
+         Debug.Log("You gain " + num);
     }
 }
