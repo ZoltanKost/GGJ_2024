@@ -14,6 +14,7 @@ public class Jokemeter : MonoBehaviour
 
     void Awake(){
         calculatorHandler.OnJokeSubmitted += ChangeCahngeJokeMeterValue;
+        jokemeterImage.sprite = jokeFaces.GetEmotion(Progress);
     }
     private void ChangeCahngeJokeMeterValue(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)
     {
