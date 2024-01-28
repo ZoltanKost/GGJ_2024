@@ -7,6 +7,8 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private float jokeMeterMaxValue;
     [SerializeField] private Image jokemeterImage;
     [SerializeField] private CalculatorHandler calculatorHandler;
+    [SerializeField] private FaceEmotionsSO jokeFaces;
+    
 
     public float Progress => (float)jokeMeterValue / jokeMeterMaxValue;
 
@@ -21,7 +23,7 @@ public class Jokemeter : MonoBehaviour
         {
             jokeMeterValue = jokeMeterMaxValue;
         }
-        jokemeterImage.rectTransform.anchorMax = new Vector2(1f, (float)jokeMeterValue / jokeMeterMaxValue);
+        jokemeterImage.sprite = jokeFaces.GetEmotion(jokeMeterMaxValue);
 
     }
 }
