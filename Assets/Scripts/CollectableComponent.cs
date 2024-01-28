@@ -24,7 +24,7 @@ public class Collectable : AInteractable
         {
             OnCollected?.Invoke(this, JokePieceSO.AudioMain);
         }
-        await dialogBox.ShowDialogWithTask("You acquired half a joke!");
+        await dialogBox.ShowDialogWithTask("You acquired half a joke! Added to your Inventory");
        
     }
 }
