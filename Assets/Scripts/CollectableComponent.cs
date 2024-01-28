@@ -25,7 +25,7 @@ public class Collectable : AInteractable
             asource.Play();
             Destroy(asource, 12f);
         }
-        await dialogBox.ShowDialogWithTask("You acquired half a joke!");
+        await dialogBox.ShowDialogWithTask("You acquired half a joke! Added to your Inventory");
        
     }
 }

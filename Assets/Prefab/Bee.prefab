@@ -121,4 +121,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JokePieceSO: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
   dialogBox: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 3248824990860331212}
