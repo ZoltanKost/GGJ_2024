@@ -23,7 +23,7 @@ public class Jokemeter : MonoBehaviour
         {
             jokeMeterValue = jokeMeterMaxValue;
         }
-        jokemeterImage.sprite = jokeFaces.GetEmotion(jokeMeterMaxValue);
+        jokemeterImage.sprite = jokeFaces.GetEmotion(Progress);
 
     }
 }
