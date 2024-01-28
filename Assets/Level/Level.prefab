@@ -8358,6 +8358,7 @@ GameObject:
   - component: {fileID: 7013942312604351376}
   - component: {fileID: 3243517532346170320}
   - component: {fileID: 1659489289074776188}
+  - component: {fileID: 3679017637501769819}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -8401,7 +8402,7 @@ MonoBehaviour:
   collect_PopUp: {fileID: 0}
   collect_PopUpLabel: {fileID: 0}
   rb: {fileID: 1659489289074776188}
-  movementForce: 340
+  movementForce: 330
   pickUp: 101
   inventoryOpen: 105
   dialogBox: {fileID: 0}
@@ -8433,6 +8434,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3679017637501769819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7705330879742383812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbefdc296b069974e8e1bf897f955c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds:
+    serializedVersion: 2
+    x: -5
+    y: -4
+    width: 10
+    height: 8
+  spawnDelayMin: 1
+  spawnDelayMax: 1
+  prefab: {fileID: 8581970235856912027, guid: d7ad21c5fcde4784a8c41c934124cea6, type: 3}
 --- !u!1 &8297115098504557361
 GameObject:
   m_ObjectHideFlags: 0

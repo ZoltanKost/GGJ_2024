@@ -8,7 +8,8 @@ public class JokePieceSO : ScriptableObject{
     public class ComboData{
         public JokePieceSO compatiblePiece;
         public  int score;
-        public  AudioClip clip; 
+        [UnityEngine.Serialization.FormerlySerializedAs("clip")] public  AudioClip clipGerman; 
+        public  AudioClip clipEnglish; 
     }
     public String text;
     [SerializeField] AudioClip audio;
@@ -26,7 +27,7 @@ public class JokePieceSO : ScriptableObject{
         if(_jokePiece_data == null){
             Generate();
         }
-        return _jokePiece_data[so].clip;
+        return _jokePiece_data[so].clipGerman;
     }
     public Dictionary<JokePieceSO, ComboData> Generate(){
         _jokePiece_data = new();
