@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
@@ -27,7 +24,5 @@ public class ColorChanger : MonoBehaviour
         }
         lerpColor = Color.Lerp(oldColor, color[indexNumber], timeRunning);
         m_TextMeshPro.color = lerpColor;
-
-
     }
 }
