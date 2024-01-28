@@ -12,6 +12,12 @@ public class MenueScript : MonoBehaviour
     {
         languageMenue.SetActive(true); ;
     }
+
+    public void GetBack()
+    {
+        languageMenue.SetActive(false); ;
+    }
+
     public void StartGameGerman()
     {
         languageScript.CurrentLanguage = Language.German;
