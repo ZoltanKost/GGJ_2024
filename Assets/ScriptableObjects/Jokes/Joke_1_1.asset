@@ -16,11 +16,7 @@ MonoBehaviour:
   audio: {fileID: 8300000, guid: c826894b2d0557842a7b5e198efa5cd3, type: 3}
   data:
   - compatiblePiece: {fileID: 11400000, guid: 5c5331ce5dc21004d854fe6a52daed24, type: 2}
-<<<<<<< HEAD
-    score: 10
-=======
     score: 20
->>>>>>> origin/main
     clipGerman: {fileID: 8300000, guid: 53e8d090809cd8e449483e1e31dde94c, type: 3}
     clipEnglish: {fileID: 8300000, guid: 19415ae4a5332b44bb137710d44ce3e5, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 8006eb31610ad1245b38ddc1d51a140c, type: 2}
@@ -28,7 +24,7 @@ MonoBehaviour:
     clipGerman: {fileID: 8300000, guid: 05f9ee2c7c829ad4fbc05714517a8865, type: 3}
     clipEnglish: {fileID: 8300000, guid: a8f909c55c08eb542ab6f8fc131d8b79, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
-    score: 5
+    score: 10
     clipGerman: {fileID: 8300000, guid: b5521bd2c8ddda749ba8a33729e2c762, type: 3}
     clipEnglish: {fileID: 8300000, guid: b9b20867af69e354ab1071a5d977c4a2, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: fb43438fe9e72e34f90091b5ebf4a1a6, type: 2}
