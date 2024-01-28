@@ -281,6 +281,10 @@ PrefabInstance:
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 1153763716}
+    - target: {fileID: 1496688199609255814, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2467016894095601591, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: dialogBox
       value: 
@@ -498,6 +502,10 @@ PrefabInstance:
       value: 2147483649
       objectReference: {fileID: 0}
     - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_Tiles.Array.data[1223].second.m_AllTileFlags
+      value: 2147483650
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_Tiles.Array.data[1246].second.m_AllTileFlags
       value: 2147483649
       objectReference: {fileID: 0}
@@ -518,6 +526,10 @@ PrefabInstance:
       value: 2147483649
       objectReference: {fileID: 0}
     - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_Tiles.Array.data[1466].second.m_AllTileFlags
+      value: 2147483650
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_Tiles.Array.data[2064].second.m_AllTileFlags
       value: 2147483649
       objectReference: {fileID: 0}
@@ -532,6 +544,10 @@ PrefabInstance:
     - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_Tiles.Array.data[2606].second.m_AllTileFlags
       value: 2147483649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_Tiles.Array.data[2817].second.m_AllTileFlags
+      value: 2147483650
       objectReference: {fileID: 0}
     - target: {fileID: 4747341869007469213, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_Tiles.Array.data[2936].second.m_AllTileFlags
@@ -677,6 +693,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[2832].second.m_TileSpriteIndex
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 5320924882707167203, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6043611793098738462, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -733,6 +753,14 @@ PrefabInstance:
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 1153763716}
+    - target: {fileID: 7734850189892601655, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265127030209574687, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8650104861205231088, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_Name
       value: Level
@@ -1825,7 +1853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 2.5000324, y: 0}
+  m_AnchoredPosition: {x: 2.500061, y: 0}
   m_SizeDelta: {x: -44.999935, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058116920
