@@ -22,7 +22,7 @@ public class Collectable : AInteractable
             var asource = interactor.gameObject.AddComponent<AudioSource>();
             asource.clip = JokePieceSO.AudioMain;
             asource.Play();
-            Destroy(asource,12f);
+            Destroy(asource, 12f);
         }
     }
 }
