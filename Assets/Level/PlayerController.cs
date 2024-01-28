@@ -14,13 +14,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] DialogBox dialogBox;
     [SerializeField] private string WalkAnimation;
     private Animator animator;
-    private AudioSource audioSource;
-    private bool looksLeft = true;
+    private AudioSource stepSource;
+    [SerializeField] private AudioSource voiceSource;
 
     float _speedBonus;
     void Awake(){
         animator = GetComponentInChildren<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        stepSource = GetComponent<AudioSource>();
     }
 
     internal void AddSpeedBonus(float speedBonusAmount)
@@ -80,10 +80,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(WalkAnimation, moving);
             rb.AddForce(input * (movementForce+ _speedBonus));
             if(!moving) {
-                if(audioSource.isPlaying) audioSource.Stop();
+                if(stepSource.isPlaying) stepSource.Stop();
                 return;
             }
-            if(!audioSource.isPlaying) audioSource.Play();
+            if(!stepSource.isPlaying) stepSource.Play();
             bool goesLeft = input.x < 0;
             if(goesLeft) LookLeft();
             else LookRight();
@@ -133,5 +133,9 @@ public class PlayerController : MonoBehaviour
         Vector3 targetLook = transform.localScale;
         targetLook.x = -Mathf.Abs(targetLook.x); 
         animator.transform.localScale = targetLook;
+    }
+    public void SetAudioAndPlay(AudioClip clip){
+        voiceSource.clip = clip;
+        voiceSource.Play();
     }
 }

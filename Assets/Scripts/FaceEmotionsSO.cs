@@ -7,6 +7,6 @@ public class FaceEmotionsSO : ScriptableObject
 
     public Sprite GetEmotion(float progress)
     {
-        return emotions[Mathf.RoundToInt(Mathf.Clamp(progress, 0f, 1f)) * emotions.Length];
+        return emotions[Mathf.RoundToInt(Mathf.Clamp(progress, 0f, 1f) * (emotions.Length-1))];
     }
 }
