@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] KeyCode pickUp;
     [SerializeField] KeyCode inventoryOpen;
     [SerializeField] DialogBox dialogBox;
+
+    float _speedBonus;
+
+    internal void AddSpeedBonus(float speedBonusAmount)
+    {
+        _speedBonus += speedBonusAmount;
+    }
+
     [SerializeField] float throwPower;
 
     public InventoryHandler InventoryHandler => inventoryHandler;
@@ -68,7 +76,7 @@ public class PlayerController : MonoBehaviour
         if (_inputBlockingObjects.Count == 0)
         {
             var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            rb.AddForce(input * movementForce);
+            rb.AddForce(input * (movementForce+ _speedBonus));
         }
     }
 
