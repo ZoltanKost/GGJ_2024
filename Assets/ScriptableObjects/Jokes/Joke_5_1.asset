@@ -17,16 +17,21 @@ MonoBehaviour:
   data:
   - compatiblePiece: {fileID: 11400000, guid: 5c5331ce5dc21004d854fe6a52daed24, type: 2}
     score: 0
-    clip: {fileID: 8300000, guid: 89e1673eabc3ae44c98586c3a88000a5, type: 3}
+    clipGerman: {fileID: 8300000, guid: 89e1673eabc3ae44c98586c3a88000a5, type: 3}
+    clipEnglish: {fileID: 8300000, guid: 4ade644d528c17b49b0ba6814ff6b6d2, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 8006eb31610ad1245b38ddc1d51a140c, type: 2}
     score: 0
-    clip: {fileID: 8300000, guid: 8b60400b2879d0949ba02ff72762e027, type: 3}
+    clipGerman: {fileID: 8300000, guid: 8b60400b2879d0949ba02ff72762e027, type: 3}
+    clipEnglish: {fileID: 8300000, guid: 4a443bfe09578d44cb5da890c968bef4, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
     score: 0
-    clip: {fileID: 8300000, guid: 119fc4ad0971eba47ac08a9176a9a570, type: 3}
+    clipGerman: {fileID: 8300000, guid: 119fc4ad0971eba47ac08a9176a9a570, type: 3}
+    clipEnglish: {fileID: 8300000, guid: 6a1b773a6ba0636418e56b4a8639ffd2, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: fb43438fe9e72e34f90091b5ebf4a1a6, type: 2}
     score: 0
-    clip: {fileID: 8300000, guid: 51df95492c7a86343a11c843168ce0ee, type: 3}
+    clipGerman: {fileID: 8300000, guid: 51df95492c7a86343a11c843168ce0ee, type: 3}
+    clipEnglish: {fileID: 8300000, guid: 3022ec7b18b717f41aea65d022f52300, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 90c4289241636ef4ab6fa343d51e7201, type: 2}
     score: 0
-    clip: {fileID: 8300000, guid: fc4f7cfa409ab7d44907f2b262c059c7, type: 3}
+    clipGerman: {fileID: 8300000, guid: fc4f7cfa409ab7d44907f2b262c059c7, type: 3}
+    clipEnglish: {fileID: 8300000, guid: b8af9783eb982594db280528e5f2d5ee, type: 3}
