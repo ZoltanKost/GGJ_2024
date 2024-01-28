@@ -1215,14 +1215,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jokemeter
       objectReference: {fileID: 0}
-    - target: {fileID: 127790980944321474, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053406849407286412, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
-      propertyPath: m_OverridePixelPerfect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7939780936715951827, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1254,18 +1246,6 @@ PrefabInstance:
     - target: {fileID: 7939780936715951827, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7939780936715951827, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7939780936715951827, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7939780936715951827, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7939780936715951827, guid: bd236bcd31f595e438c3a741e96dff30, type: 3}
       propertyPath: m_LocalPosition.x
