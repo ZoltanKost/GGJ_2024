@@ -135,6 +135,14 @@ PrefabInstance:
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 1153763716}
+    - target: {fileID: 1169408150578007705, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 1169408150578007705, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: submitter
+      value: 
+      objectReference: {fileID: 1696455219}
     - target: {fileID: 1375338709905839096, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: dialogBox
       value: 

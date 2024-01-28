@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3237062619166629874}
   - component: {fileID: 6886645986221921526}
+  - component: {fileID: 5491176930064906431}
+  - component: {fileID: 2840302495062704293}
   m_Layer: 0
   m_Name: BahnTeil1
   m_TagString: Untagged
@@ -84,3 +86,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5491176930064906431
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923646333810759125}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffbb5ed5c8b4d8d468e92d9eb96b4fc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2840302495062704293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923646333810759125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653e4de8f7601a049a13e091aaa8af53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JokePieceSO: {fileID: 11400000, guid: 2d1f0ce4618ac48469c1ea04abe37c29, type: 2}
+  dialogBox: {fileID: 0}
+  anim: {fileID: 5491176930064906431}
