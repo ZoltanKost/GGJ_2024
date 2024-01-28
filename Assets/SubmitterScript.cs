@@ -7,6 +7,7 @@ public class SubmitterScript : MonoBehaviour
     [SerializeField] private TMP_Text text;
 
     public bool IsComplete => num >= 5;
+    public int NumJokesCommited => num;
     
     int num = 0;
 

@@ -12,6 +12,7 @@ public class InventoryHandler : MonoBehaviour
     private DragScript currentPiece;
     [SerializeField] private DropScript[] Calculator_Footer;
     [SerializeField] CalculatorHandler handler;
+
     void Awake(){
         for(int i = 0; i < Calculator_Footer.Length; i++){
             Calculator_Footer[i].OnJokeDropped += OnJokeDropped;
