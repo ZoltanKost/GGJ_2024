@@ -1,17 +1,30 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryHandler : MonoBehaviour
 {
+    [SerializeField] Button toggleButton;
     [SerializeField] private DragScript prefab;
     [SerializeField] private DropScript[] slots;
     [SerializeField] private Transform InventoryUI;
     private int currentSlot = 0;
     private DragScript currentPiece;
     [SerializeField] private DropScript[] Calculator_Footer;
+    [SerializeField] CalculatorHandler handler;
+
     void Awake(){
         for(int i = 0; i < Calculator_Footer.Length; i++){
             Calculator_Footer[i].OnJokeDropped += OnJokeDropped;
         }
+
+        handler.OnJokeSubmitted += OnJokeSubmitted;
+        toggleButton.onClick.AddListener(ToggleInventory);
+    }
+
+    private void OnJokeSubmitted(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)
+    {
+        UnassignAllFooterJokes();
     }
 
     public void AddToInventory(JokePieceSO jokePiece){
@@ -37,14 +50,18 @@ public class InventoryHandler : MonoBehaviour
     public void CloseInventory()
     {
         InventoryUI.gameObject.SetActive(false);
+        UnassignAllFooterJokes();
+    }
 
-        foreach(var f in Calculator_Footer)
+    void UnassignAllFooterJokes()
+    {
+        foreach (var f in Calculator_Footer)
         {
-            if(f.occupied)
+            if (f.occupied)
             {
-                foreach(DropScript s in slots)
+                foreach (DropScript s in slots)
                 {
-                    if(!s.occupied)
+                    if (!s.occupied)
                     {
                         s.SetJokeObject(f.GetJokeObject());
                         f.GetJokeObject().SetParentSlot(s);

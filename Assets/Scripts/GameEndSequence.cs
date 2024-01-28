@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameEndSequence : MonoBehaviour
 {
     [Serializable]
-    class TextString
+    public class TextString
     {
         [SerializeField] string english;
         [SerializeField] string german;

@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &1288624526263213050
 GameObject:
@@ -180,7 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &4023141205604327259
 GameObject:
@@ -271,7 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &4171900166235417048
 GameObject:
@@ -331,14 +328,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 0.77254903}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e814647a940bf9f47acd1c92adc8a7af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -437,7 +434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &4833127312256675346
 GameObject:
@@ -528,7 +524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &5227412197089803267
 GameObject:
@@ -619,7 +614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &5436717329317723853
 GameObject:
@@ -710,7 +704,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &5525444460067867957
 GameObject:
@@ -801,7 +794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &5730771641891512398
 GameObject:
@@ -892,7 +884,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &6620932215959113552
 GameObject:
@@ -1117,7 +1108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &6938098306923759565
 GameObject:
@@ -1208,7 +1198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
 --- !u!1 &7144484967639881587
 GameObject:
@@ -1609,5 +1598,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jokeObject: {fileID: 0}
-  image: {fileID: 0}
   occupied: 0
