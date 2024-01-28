@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
@@ -9,11 +10,18 @@ public class DialogBox : MonoBehaviour
     [SerializeField] PlayerController playerController;
     
     Coroutine _coroutine;
+    TaskCompletionSource<bool> _source;
 
     public void ShowDialog(string text)
     {
-        if(_coroutine!=null)
+        ShowDialogWithTask(text);
+    }
+
+    public Task ShowDialogWithTask(string text)
+    {
+        if (_coroutine != null)
         {
+            _source.SetCanceled();
             playerController.UnblockInput(_coroutine);
             StopCoroutine(_coroutine);
         }
@@ -23,7 +31,9 @@ public class DialogBox : MonoBehaviour
         tmpText.maxVisibleCharacters = 0;
 
         _coroutine = StartCoroutine(DoShowDialog());
+        _source = new TaskCompletionSource<bool>();
         playerController.BlockInput(_coroutine);
+        return _source.Task;
     }
 
     IEnumerator DoShowDialog()
@@ -46,6 +56,7 @@ public class DialogBox : MonoBehaviour
                 {
                     playerController.UnblockInput(_coroutine);
                     _coroutine = null;
+                    _source.SetResult(true);
                     gameObject.SetActive(false);
                 }
             }
