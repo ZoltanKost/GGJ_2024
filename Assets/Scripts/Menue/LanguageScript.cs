@@ -7,7 +7,7 @@ public class LanguageScript : MonoBehaviour
     [SerializeField] private GameObject SceneValues;
     [SerializeField] private Language currentLanguage;
 
-    public Language Language1
+    public Language CurrentLanguage
     { get => currentLanguage; set => currentLanguage = value; }
 
     void Awake()

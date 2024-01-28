@@ -13,12 +13,12 @@ public class MenueScript : MonoBehaviour
     }
     public void StartGameGerman()
     {
-        languageScript.Language1 = Language.German;
+        languageScript.CurrentLanguage = Language.German;
         SceneManager.LoadScene(1);
     }
     public void StartGameEnglisch()
     {
-        languageScript.Language1 = Language.Englisch;
+        languageScript.CurrentLanguage = Language.Englisch;
         SceneManager.LoadScene(1);
     }
 

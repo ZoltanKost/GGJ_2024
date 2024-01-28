@@ -15,6 +15,10 @@ public class JokePieceSO : ScriptableObject{
     [SerializeField] AudioClip audio;
     [SerializeField] private List<ComboData> data;
 
+    private void Awake()
+    {
+        
+    }
     private Dictionary<JokePieceSO, ComboData>  _jokePiece_data;
     public int GetScore(JokePieceSO so){
         if(_jokePiece_data == null){
@@ -23,11 +27,21 @@ public class JokePieceSO : ScriptableObject{
         if(!_jokePiece_data.ContainsKey(so)) return 0;
         return _jokePiece_data[so].score;
     }
-    public AudioClip GetAudio(JokePieceSO so){
-        if(_jokePiece_data == null){
+    public AudioClip GetAudioGerman(JokePieceSO so)
+    {
+        if (_jokePiece_data == null)
+        {
             Generate();
         }
         return _jokePiece_data[so].clipGerman;
+    }
+    public AudioClip GetAudioEnglisch(JokePieceSO so)
+    {
+        if (_jokePiece_data == null)
+        {
+            Generate();
+        }
+        return _jokePiece_data[so].clipEnglish;
     }
     public Dictionary<JokePieceSO, ComboData> Generate(){
         _jokePiece_data = new();
