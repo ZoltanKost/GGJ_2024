@@ -7,6 +7,9 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private float jokeMeterMaxValue;
     [SerializeField] private Image jokemeterImage;
     [SerializeField] private CalculatorHandler calculatorHandler;
+
+    public float Progress => (float)jokeMeterValue / jokeMeterMaxValue;
+
     void Awake(){
         calculatorHandler.OnJokeSubmitted += ChangeCahngeJokeMeterValue;
     }

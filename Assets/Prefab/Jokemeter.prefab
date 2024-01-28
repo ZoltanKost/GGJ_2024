@@ -118,6 +118,7 @@ MonoBehaviour:
   jokeMeterValue: 0
   jokeMeterMaxValue: 100
   jokemeterImage: {fileID: 2467529294489036412}
+  calculatorHandler: {fileID: 0}
 --- !u!1 &2341676186733153021
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 115}
-  m_SizeDelta: {x: 50, y: 210}
+  m_AnchoredPosition: {x: 115, y: 115}
+  m_SizeDelta: {x: 210, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1133836037938621878
 CanvasRenderer:
