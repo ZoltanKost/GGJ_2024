@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 457387362368345160, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 1375338709905839096, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
     - target: {fileID: 1464724873335873166, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: dialogBox
       value: 
@@ -155,6 +163,14 @@ PrefabInstance:
       propertyPath: faceAnimationDirector
       value: 
       objectReference: {fileID: 1664831487}
+    - target: {fileID: 2558371505998637327, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 2827655319227679279, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
     - target: {fileID: 3243517532346170320, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: dialogBox
       value: 
@@ -175,7 +191,19 @@ PrefabInstance:
       propertyPath: collect_PopUpLabel
       value: 
       objectReference: {fileID: 1058116920}
+    - target: {fileID: 3502795363005102621, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
     - target: {fileID: 4237342493046750463, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 4305387705926827052, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 4678277273349136887, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 1153763716}
@@ -16443,6 +16471,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6799363202791403371, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 6988191538741358658, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 7121008556866043489, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 7708868379519182195, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
     - target: {fileID: 8650104861205231088, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_Name
       value: Level
