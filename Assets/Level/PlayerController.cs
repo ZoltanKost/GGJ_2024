@@ -75,8 +75,10 @@ public class PlayerController : MonoBehaviour
         if (_inputBlockingObjects.Count == 0)
         {
             var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            animator.SetBool(WalkAnimation,input.normalized.magnitude > 0);
+            bool moving = input.normalized.magnitude > 0;
+            animator.SetBool(WalkAnimation, moving);
             rb.AddForce(input * (movementForce+ _speedBonus));
+            if(!moving) return;
             bool goesLeft = input.x < 0;
             if(goesLeft) LookLeft();
             else LookRight();

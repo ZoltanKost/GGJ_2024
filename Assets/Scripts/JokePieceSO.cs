@@ -14,11 +14,7 @@ public class JokePieceSO : ScriptableObject{
     public String text;
     [SerializeField] AudioClip audio;
     [SerializeField] private List<ComboData> data;
-
-    private void Awake()
-    {
-        
-    }
+    
     private Dictionary<JokePieceSO, ComboData>  _jokePiece_data;
     public int GetScore(JokePieceSO so){
         if(_jokePiece_data == null){

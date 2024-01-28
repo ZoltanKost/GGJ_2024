@@ -19,7 +19,9 @@ public class GameEndSequence : MonoBehaviour
         };
     }
 
+    [SerializeField] TextString intro;
     [SerializeField] TextString text1;
+    [SerializeField] TextString notCompletedText;
     [SerializeField] PlayableDirector faceAnimationDirector;
     [SerializeField] Image faceImage;
     [SerializeField] TextString[] resultTexts;
@@ -28,9 +30,21 @@ public class GameEndSequence : MonoBehaviour
     [SerializeField] DialogBox dialogBox;
     [SerializeField] BurgerRain rain;
     [SerializeField] FaceEmotionsSO emotions;
+    [SerializeField] SubmitterScript submitterScript;
+
+    private void Awake()
+    {
+        dialogBox.ShowDialog(intro.Text);
+    }
 
     public async void RunEnd(PlayerController playerController)
     {
+        if(!submitterScript.IsComplete)
+        {
+            dialogBox.ShowDialog(notCompletedText.Text);
+            return;
+        }
+
         var blockerKey = new object();
         playerController.BlockInput(blockerKey);
         objectToDisableWhenEndingStarts.gameObject.SetActive(false);
