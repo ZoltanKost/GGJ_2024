@@ -31,6 +31,46 @@ public class InventoryHandler : MonoBehaviour
         joke.OnDragEnd += OnDragEnd;
         InventoryUI.gameObject.SetActive(false);
     }
+
+    public void OpenInventory()
+    {
+        InventoryUI.gameObject.SetActive(true);
+    }
+
+    public void CloseInventory()
+    {
+        InventoryUI.gameObject.SetActive(false);
+
+        foreach(var f in Calculator_Footer)
+        {
+            if(f.occupied)
+            {
+                foreach(var s in slots)
+                {
+                    if(!s.occupied)
+                    {
+                        s.SetJokeObject(f.GetJokeObject());
+                        f.GetJokeObject().SetParentSlot(s);
+                        f.ResetJokeObject();
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        if(InventoryUI.gameObject.activeSelf)
+        {
+            CloseInventory();
+        }
+        else
+        {
+            OpenInventory();
+        }
+    }
+
     void OnDragBegin(object sender, DragScript script){
         Debug.Log("Drag begun!");
         currentPiece = script;

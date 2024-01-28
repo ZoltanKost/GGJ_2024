@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private InventoryHandler inventoryHandler;
-    [SerializeField] private GameObject InventoryUI;
     [SerializeField] private Transform collect_PopUp;
     [SerializeField] private TMP_Text collect_PopUpLabel;
     [SerializeField] Rigidbody2D rb;
@@ -36,14 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(inventoryOpen))
             {
-                if (!InventoryUI.activeSelf)
-                {
-                    InventoryUI.SetActive(true);
-                }
-                else
-                {
-                    InventoryUI.SetActive(false);
-                }
+                inventoryHandler.ToggleInventory();
             }
 
             if(_interactablesInRange.Count>0)
