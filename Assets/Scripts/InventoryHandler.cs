@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryHandler : MonoBehaviour
 {
+    [SerializeField] Button toggleButton;
     [SerializeField] private DragScript prefab;
     [SerializeField] private DropScript[] slots;
     [SerializeField] private Transform InventoryUI;
@@ -16,6 +18,7 @@ public class InventoryHandler : MonoBehaviour
         }
 
         handler.OnJokeSubmitted += OnJokeSubmitted;
+        toggleButton.onClick.AddListener(ToggleInventory);
     }
 
     private void OnJokeSubmitted(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)
