@@ -13,8 +13,8 @@ public class GameEndSequence : MonoBehaviour
 
         public string Text => LanguageScript.CurrentLanguageStatic switch
         {
-            Language.German => english,
-            Language.Englisch => german,
+            Language.German => german,
+            Language.Englisch => english,
             _ => throw new NotImplementedException(),
         };
     }
