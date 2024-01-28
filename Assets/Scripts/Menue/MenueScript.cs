@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenueScript : MonoBehaviour
 {
     [SerializeField] private GameObject languageMenue;
+    [SerializeField] private GameObject readMeMenue;
     [SerializeField] private LanguageScript languageScript;
     public void StartGame()
     {
@@ -21,6 +22,11 @@ public class MenueScript : MonoBehaviour
         languageScript.CurrentLanguage = Language.Englisch;
         SceneManager.LoadScene(1);
     }
+    public void PressReadMeButton()
+    {
+        readMeMenue.SetActive (true);
+    }
+
 
     public void EndGame()
     {
