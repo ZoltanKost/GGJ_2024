@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float movementForce;
     [SerializeField] KeyCode pickUp;
     [SerializeField] KeyCode inventoryOpen;
-    [SerializeField] float radius;
     [SerializeField] DialogBox dialogBox;
 
     public InventoryHandler InventoryHandler => inventoryHandler;
@@ -90,7 +89,6 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var interactable = collision.GetComponentInParent<AInteractable>();
-        Debug.Log("ENTER"+ interactable);
 
         if (interactable)
         {
@@ -101,7 +99,6 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         var interactable = collision.GetComponentInParent<AInteractable>(true);
-        Debug.Log("Exit" + interactable);
         if (interactable)
         {
             _interactablesInRange.Remove(interactable);
