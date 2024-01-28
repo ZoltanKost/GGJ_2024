@@ -148,6 +148,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1579454069}
     - target: {fileID: 2467016894095601591, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: submitterScript
+      value: 
+      objectReference: {fileID: 1696455219}
+    - target: {fileID: 2467016894095601591, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: faceAnimationDirector
       value: 
       objectReference: {fileID: 1664831487}
@@ -18136,7 +18140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calculatorHandler: {fileID: 652088908}
-  text: {fileID: 1245930961}
+  text: {fileID: 1297620046}
 --- !u!114 &1752038727 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3243517532346170320, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
