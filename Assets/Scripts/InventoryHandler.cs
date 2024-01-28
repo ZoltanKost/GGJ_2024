@@ -8,11 +8,7 @@ public class InventoryHandler : MonoBehaviour
     private int currentSlot = 0;
     private DragScript currentPiece;
     [SerializeField] private DropScript[] Calculator_Footer;
-    [SerializeField] private JokePieceSO[] jokePieces; 
     void Awake(){
-        for(int i = 0; i < jokePieces.Length; i++){
-            AddToInventory(jokePieces[i]);
-        }
         for(int i = 0; i < Calculator_Footer.Length; i++){
             Calculator_Footer[i].OnJokeDropped += OnJokeDropped;
         }
@@ -22,6 +18,7 @@ public class InventoryHandler : MonoBehaviour
         InventoryUI.gameObject.SetActive(true);
         DragScript joke = Instantiate(prefab, InventoryUI);
         DropScript slot = slots[currentSlot];
+        slot.SetJokeObject(joke);
         joke.SetJokePiece(jokePiece);
         joke.SetParentSlot(slot);
         currentSlot++;
@@ -45,7 +42,7 @@ public class InventoryHandler : MonoBehaviour
         {
             if(f.occupied)
             {
-                foreach(var s in slots)
+                foreach(DropScript s in slots)
                 {
                     if(!s.occupied)
                     {
