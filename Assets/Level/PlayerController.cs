@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TMP_Text collect_PopUpLabel;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float movementForce;
-    [SerializeField] KeyCode pickUp;
+    [SerializeField] string pickUpButton;
     [SerializeField] KeyCode inventoryOpen;
     [SerializeField] DialogBox dialogBox;
 
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
                 collect_PopUpLabel.text = closestInteractable.UILabel;
                 collect_PopUp.gameObject.SetActive(true);
-                if (Input.GetKeyDown(pickUp))
+                if (Input.GetButtonDown(pickUpButton))
                 {
                     closestInteractable.Interact(this);
                 }

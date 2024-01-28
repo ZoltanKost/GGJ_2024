@@ -7,10 +7,8 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private float jokeMeterMaxValue;
     [SerializeField] private Image jokemeterImage;
     [SerializeField] private CalculatorHandler calculatorHandler;
-    [SerializeField] private LanguageScript languageScript;
     void Awake(){
         calculatorHandler.OnJokeSubmitted += ChangeCahngeJokeMeterValue;
-        languageScript = FindAnyObjectByType<LanguageScript>();
     }
     private void ChangeCahngeJokeMeterValue(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)
     {

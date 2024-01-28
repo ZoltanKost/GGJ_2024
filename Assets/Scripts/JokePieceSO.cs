@@ -27,21 +27,24 @@ public class JokePieceSO : ScriptableObject{
         if(!_jokePiece_data.ContainsKey(so)) return 0;
         return _jokePiece_data[so].score;
     }
-    public AudioClip GetAudioGerman(JokePieceSO so)
+    public AudioClip GetAudio(JokePieceSO so, string language)
     {
         if (_jokePiece_data == null)
         {
             Generate();
         }
-        return _jokePiece_data[so].clipGerman;
-    }
-    public AudioClip GetAudioEnglisch(JokePieceSO so)
-    {
-        if (_jokePiece_data == null)
+        if (language == "German")
         {
-            Generate();
+            return _jokePiece_data[so].clipGerman;
         }
-        return _jokePiece_data[so].clipEnglish;
+        else if (language == "English")
+        {
+            return _jokePiece_data[so].clipGerman;
+        }
+        else
+        {
+            return _jokePiece_data[so].clipGerman;
+        }
     }
     public Dictionary<JokePieceSO, ComboData> Generate(){
         _jokePiece_data = new();

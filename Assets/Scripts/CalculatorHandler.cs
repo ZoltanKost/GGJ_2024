@@ -19,30 +19,24 @@ public class CalculatorHandler : MonoBehaviour
     {
         languageScript = FindAnyObjectByType<LanguageScript>();
     }
-
     public void Calculate(){
         if(!footer1.occupied || !footer2.occupied){
             return;
         }
         joke1 = footer1.GetJokeSO();
         joke2 = footer2.GetJokeSO();
-        if(!joke1.HasScore(joke2)) return;
+        var canScore = !footer1.GetJokeObject().HasScoredPoints && !footer2.GetJokeObject().HasScoredPoints;
+        if (!joke1.HasScore(joke2)) return;
 
-        if (languageScript.CurrentLanguage == Language.German)
+        if(canScore)
         {
-            OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs
-            {
-                value = joke1.GetScore(joke2),
-                audioClip = joke1.GetAudioGerman(joke2)
-            });
+            footer1.GetJokeObject().SetHasScoredPoints();
+            footer2.GetJokeObject().SetHasScoredPoints();
         }
-        else if (languageScript.CurrentLanguage == Language.Englisch)
-        {
-            OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs
-            {
-                value = joke1.GetScore(joke2),
-                audioClip = joke1.GetAudioEnglisch(joke2)
-            });
-        }
+
+        OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs{
+            value = canScore ? joke1.GetScore(joke2) : 0, 
+            audioClip = joke1.GetAudio(joke2, languageScript.CurrentLanguage.ToString())
+        });
     }
 }
