@@ -142,10 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7e8980d09e4cf4db541acda82698a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intro:
+    english: You are the chosen one to make me laugh. Find the best jokes! Then com
+      back to entertain me!
+    german: "Du wurdest Ausgew\xE4hlt, mich, den Witzerd zum Lachen zu bringen. Finde
+      alle Witze, dann sprich wieder mit mir :)"
   text1:
     english: Will you make me laugh? I'll be the judge of that!
     german: "Sie sind zur\xFCckgekehrt. K\xF6nnen sie mich zum Lachen bringen?"
+  notCompletedText:
+    english: Not found all jokes yet. Come back later
+    german: "Du hast noch nicht alle Witze gefunden. Komm sp\xE4ter wieder"
   faceAnimationDirector: {fileID: 0}
+  faceImage: {fileID: 0}
   resultTexts:
   - english: That stinks
     german: Das hat mir nicht gut gefallen
@@ -157,3 +166,5 @@ MonoBehaviour:
   objectToDisableWhenEndingStarts: {fileID: 3826093561562109103}
   dialogBox: {fileID: 0}
   rain: {fileID: 0}
+  emotions: {fileID: 0}
+  submitterScript: {fileID: 0}

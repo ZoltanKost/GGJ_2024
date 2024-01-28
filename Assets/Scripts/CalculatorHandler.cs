@@ -7,6 +7,7 @@ public class CalculatorHandler : MonoBehaviour
     public class OnJokeSubmittedEventArgs{
         public int value;
         public AudioClip audioClip;
+        public bool didScore;
     }
     [SerializeField] private DropScript footer1;
     [SerializeField] private DropScript footer2;
@@ -29,7 +30,8 @@ public class CalculatorHandler : MonoBehaviour
         }
         OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs{
             value = canScore ? joke1.GetScore(joke2) : 0, 
-            audioClip = joke1.GetAudio(joke2, LanguageScript.CurrentLanguageStatic.ToString())
+            audioClip = joke1.GetAudio(joke2, LanguageScript.CurrentLanguageStatic.ToString()),
+            didScore = canScore
         });
     }
 }
