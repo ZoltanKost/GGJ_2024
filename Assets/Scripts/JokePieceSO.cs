@@ -14,7 +14,9 @@ public class JokePieceSO : ScriptableObject{
     public String text;
     [SerializeField] AudioClip audio;
     [SerializeField] private List<ComboData> data;
-    
+
+    public AudioClip AudioMain => audio;
+
     private Dictionary<JokePieceSO, ComboData>  _jokePiece_data;
     public int GetScore(JokePieceSO so){
         if(_jokePiece_data == null){
@@ -23,6 +25,7 @@ public class JokePieceSO : ScriptableObject{
         if(!_jokePiece_data.ContainsKey(so)) return 0;
         return _jokePiece_data[so].score;
     }
+
     public AudioClip GetAudio(JokePieceSO so, string language)
     {
         if (_jokePiece_data == null)

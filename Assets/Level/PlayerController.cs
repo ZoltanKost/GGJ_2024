@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,11 +14,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] DialogBox dialogBox;
     [SerializeField] private string WalkAnimation;
     private Animator animator;
+    private AudioSource audioSource;
     private bool looksLeft = true;
 
     float _speedBonus;
     void Awake(){
         animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     internal void AddSpeedBonus(float speedBonusAmount)
@@ -78,7 +79,11 @@ public class PlayerController : MonoBehaviour
             bool moving = input.normalized.magnitude > 0;
             animator.SetBool(WalkAnimation, moving);
             rb.AddForce(input * (movementForce+ _speedBonus));
-            if(!moving) return;
+            if(!moving) {
+                if(audioSource.isPlaying) audioSource.Stop();
+                return;
+            }
+            if(!audioSource.isPlaying) audioSource.Play();
             bool goesLeft = input.x < 0;
             if(goesLeft) LookLeft();
             else LookRight();
@@ -118,12 +123,6 @@ public class PlayerController : MonoBehaviour
         {
             _interactablesInRange.Remove(interactable);
         }
-    }
-    public void SwapLookDirection(){
-        looksLeft = !looksLeft;
-        Vector3 targetLook = transform.localScale;
-        targetLook.x *= -1; 
-        animator.transform.localScale = targetLook;
     }
     void LookLeft(){
         Vector3 targetLook = transform.localScale;

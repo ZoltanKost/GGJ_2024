@@ -11,10 +11,18 @@ public class Collectable : AInteractable
         return JokePieceSO;
     }
 
-    public override void Interact(PlayerController interactor)
+    public override async void Interact(PlayerController interactor)
     {
         interactor.InventoryHandler.AddToInventory(JokePieceSO);
-        dialogBox.ShowDialog("You acuired half a joke!");
         gameObject.SetActive(false);
+        await dialogBox.ShowDialogWithTask("You acquired half a joke!");
+        
+        if(interactor)
+        {
+            var asource = interactor.gameObject.AddComponent<AudioSource>();
+            asource.clip = JokePieceSO.AudioMain;
+            asource.Play();
+            Destroy(asource, 12f);
+        }
     }
 }
