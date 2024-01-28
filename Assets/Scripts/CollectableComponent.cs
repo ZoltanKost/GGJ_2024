@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 public class Collectable : AInteractable
 {
+    public static EventHandler<AudioClip> OnCollected;
     [SerializeField] private JokePieceSO JokePieceSO;
     [SerializeField] DialogBox dialogBox;
     [SerializeField] Animator anim;
@@ -20,10 +22,7 @@ public class Collectable : AInteractable
 
         if (interactor)
         {
-            var asource = interactor.gameObject.AddComponent<AudioSource>();
-            asource.clip = JokePieceSO.AudioMain;
-            asource.Play();
-            Destroy(asource, 12f);
+            OnCollected?.Invoke(this, JokePieceSO.AudioMain);
         }
         await dialogBox.ShowDialogWithTask("You acquired half a joke! Added to your Inventory");
        
