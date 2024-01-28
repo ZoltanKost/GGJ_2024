@@ -2,16 +2,24 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource m_AudioSource;
+    [SerializeField] private AudioSource VoiceSource;
+    [SerializeField] private AudioSource musicSource;
     [SerializeField] private CalculatorHandler calculatorHandler;
     public void Awake()
     {
         calculatorHandler.OnJokeSubmitted += ChangeClip;
-    }        
+        Collectable.OnCollected += OnCollectedChange;
+    }
     public void ChangeClip(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)
     {
-        AudioSource source = m_AudioSource;
-        source.clip = e.audioClip;
-        source.Play();
+        ChangeClip(e.audioClip);
+    }
+    void ChangeClip(AudioClip audioClip){
+        VoiceSource.clip = audioClip;
+        VoiceSource.Play();
+    }
+    void OnCollectedChange(object sender, AudioClip clip){
+        VoiceSource.clip = clip;
+        VoiceSource.Play();
     }
 }
