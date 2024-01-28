@@ -11,8 +11,15 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     private DropScript currentSlot;
     [SerializeField] private Image image;
     [SerializeField] private TMP_Text text;
+    [SerializeField] CanvasGroup canvasGroup;
+
+    public bool HasScoredPoints => _hasScoredPoints;
+
     RectTransform rec;
     Canvas canvas;
+    
+    bool _hasScoredPoints;
+
     public JokePieceSO jokePieceSO{get;private set;}
 
     void Awake()
@@ -55,5 +62,11 @@ public class DragScript : MonoBehaviour,IBeginDragHandler,IEndDragHandler, IDrag
     }
     public void ResetPosition(){
         rec.anchoredPosition = currentSlot.GetComponent<RectTransform>().anchoredPosition;
+    }
+
+    public void SetHasScoredPoints()
+    {
+        _hasScoredPoints = true;
+        canvasGroup.alpha = 0.65f;
     }
 }

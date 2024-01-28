@@ -27,4 +27,9 @@ public class DropScript : MonoBehaviour, IDropHandler
     public JokePieceSO GetJokeSO(){
         return jokePieceSO;
     }
+
+    public DragScript GetJokeObject()
+    {
+        return jokeObject;
+    }
 }

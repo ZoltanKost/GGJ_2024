@@ -19,9 +19,17 @@ public class CalculatorHandler : MonoBehaviour
         }
         joke1 = footer1.GetJokeSO();
         joke2 = footer2.GetJokeSO();
-        if(!joke1.HasScore(joke2)) return;
+        var canScore = !footer1.GetJokeObject().HasScoredPoints && !footer2.GetJokeObject().HasScoredPoints;
+        if (!joke1.HasScore(joke2)) return;
+
+        if(canScore)
+        {
+            footer1.GetJokeObject().SetHasScoredPoints();
+            footer2.GetJokeObject().SetHasScoredPoints();
+        }
+
         OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs{
-            value = joke1.GetScore(joke2), 
+            value = canScore ? joke1.GetScore(joke2) : 0, 
             audioClip = joke1.GetAudio(joke2)
         });
     }
