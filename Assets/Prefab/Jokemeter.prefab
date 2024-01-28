@@ -119,6 +119,7 @@ MonoBehaviour:
   jokeMeterMaxValue: 100
   jokemeterImage: {fileID: 2467529294489036412}
   calculatorHandler: {fileID: 0}
+  jokeFaces: {fileID: 11400000, guid: cee53e667cc516f4fa145cd15125c933, type: 2}
 --- !u!1 &2341676186733153021
 GameObject:
   m_ObjectHideFlags: 0
