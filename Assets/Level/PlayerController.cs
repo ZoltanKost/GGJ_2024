@@ -13,8 +13,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] KeyCode pickUp;
     [SerializeField] KeyCode inventoryOpen;
     [SerializeField] DialogBox dialogBox;
+    [SerializeField] float throwPower;
 
     public InventoryHandler InventoryHandler => inventoryHandler;
+    public float ThrowPower => throwPower;
 
     readonly HashSet<object> _inputBlockingObjects = new HashSet<object>();
     readonly List<AInteractable> _interactablesInRange = new List<AInteractable>();
