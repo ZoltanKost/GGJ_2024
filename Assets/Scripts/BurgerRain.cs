@@ -15,11 +15,9 @@ public class BurgerRain : MonoBehaviour
 
     private IEnumerator KeepSpawning()
     {
-        var waitFor = new WaitForSeconds(UnityEngine.Random.Range(spawnDelayMin,spawnDelayMax));
-
         for (; ; )
         {
-            yield return waitFor;
+            yield return new WaitForSeconds(UnityEngine.Random.Range(spawnDelayMin, spawnDelayMax));
 
             var par = transform;
             while(par.parent)
@@ -30,5 +28,11 @@ public class BurgerRain : MonoBehaviour
             instance.transform.position = (Vector2)transform.position + new Vector2(UnityEngine.Random.Range(bounds.xMin, bounds.xMax), UnityEngine.Random.Range(bounds.yMin, bounds.yMax));
 
         }
+    }
+
+    public void MakeItRain()
+    {
+        spawnDelayMin = 0.5f;
+        spawnDelayMax = 1.2f;
     }
 }

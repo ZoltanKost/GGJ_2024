@@ -11,14 +11,8 @@ public class CalculatorHandler : MonoBehaviour
     [SerializeField] private DropScript footer1;
     [SerializeField] private DropScript footer2;
     [SerializeField] private AudioManager audioManager;
-    [SerializeField] private LanguageScript languageScript;
     JokePieceSO joke1;
     JokePieceSO joke2;
-
-    private void Awake()
-    {
-        languageScript = FindAnyObjectByType<LanguageScript>();
-    }
     public void Calculate(){
         if(!footer1.occupied || !footer2.occupied){
             return;
@@ -33,10 +27,9 @@ public class CalculatorHandler : MonoBehaviour
             footer1.GetJokeObject().SetHasScoredPoints();
             footer2.GetJokeObject().SetHasScoredPoints();
         }
-
         OnJokeSubmitted?.Invoke(this, new OnJokeSubmittedEventArgs{
             value = canScore ? joke1.GetScore(joke2) : 0, 
-            audioClip = joke1.GetAudio(joke2, languageScript.CurrentLanguage.ToString())
+            audioClip = joke1.GetAudio(joke2, LanguageScript.CurrentLanguageStatic.ToString())
         });
     }
 }
