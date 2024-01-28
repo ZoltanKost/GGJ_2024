@@ -18,6 +18,10 @@ public class MenueScript : MonoBehaviour
         languageMenue.SetActive(false); ;
     }
 
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void StartGameGerman()
     {
         languageScript.CurrentLanguage = Language.German;
