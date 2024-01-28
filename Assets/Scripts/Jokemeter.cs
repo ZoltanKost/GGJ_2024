@@ -8,7 +8,7 @@ public class Jokemeter : MonoBehaviour
     [SerializeField] private Image jokemeterImage;
     [SerializeField] private CalculatorHandler calculatorHandler;
 
-    void Update(){
+    void Awake(){
         calculatorHandler.OnJokeSubmitted += ChangeCahngeJokeMeterValue;
     }
     private void ChangeCahngeJokeMeterValue(object sender, CalculatorHandler.OnJokeSubmittedEventArgs e)

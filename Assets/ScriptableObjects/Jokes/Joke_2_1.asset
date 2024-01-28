@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c25cd8129a5c094b8d46bf448b9803b, type: 3}
+  m_Name: Joke_2_1
+  m_EditorClassIdentifier: 
+  text: "Gehen Witze \xFCber die Deutsche Bahn?"
+  audio: {fileID: 8300000, guid: bc53d322c31b13e4b95a377c8f0d9ada, type: 3}
+  data:
+  - compatiblePiece: {fileID: 11400000, guid: 5c5331ce5dc21004d854fe6a52daed24, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 85115a180e7fd1a43a112201fbcc3981, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 8006eb31610ad1245b38ddc1d51a140c, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: a022a3d2892b3044689b89a272a73e47, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 11533cb073ae7ed4fbbaefe442fc0f02, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: fb43438fe9e72e34f90091b5ebf4a1a6, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 14e02de515ef57d44a4c7a1c1bb29d00, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 90c4289241636ef4ab6fa343d51e7201, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 16208eeb393792844919e529c4152c53, type: 3}

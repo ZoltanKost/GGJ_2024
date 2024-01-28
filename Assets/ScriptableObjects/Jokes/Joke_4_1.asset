@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c25cd8129a5c094b8d46bf448b9803b, type: 3}
+  m_Name: Joke_4_1
+  m_EditorClassIdentifier: 
+  text: "Wie nennt man einen Bumerang, der nicht zur\xFCckkommt?"
+  audio: {fileID: 8300000, guid: f4aeb038cad61914dab66fa28529b74a, type: 3}
+  data:
+  - compatiblePiece: {fileID: 11400000, guid: 5c5331ce5dc21004d854fe6a52daed24, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: b906f7e0fb737d14f94601e06a6e4688, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 8006eb31610ad1245b38ddc1d51a140c, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 0fbae47132d257b4e947cbed2deda883, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 925c1d2d484968c4687657752473b509, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: fb43438fe9e72e34f90091b5ebf4a1a6, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: 281d4c2bf1efa424b861a7c2018da66d, type: 3}
+  - compatiblePiece: {fileID: 11400000, guid: 90c4289241636ef4ab6fa343d51e7201, type: 2}
+    score: 0
+    clip: {fileID: 8300000, guid: be8b68e384ec2ff4bb891c415bb1704a, type: 3}

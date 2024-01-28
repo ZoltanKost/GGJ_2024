@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -6,14 +7,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InventoryHandler inventoryHandler;
     [SerializeField] private GameObject InventoryUI;
     [SerializeField] private Transform collect_PopUp;
+    [SerializeField] private TMP_Text collect_PopUpLabel;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float movementForce;
     [SerializeField] KeyCode pickUp;
     [SerializeField] KeyCode inventoryOpen;
-    [SerializeField] float radius;
     [SerializeField] DialogBox dialogBox;
+    [SerializeField] float throwPower;
+
+    public InventoryHandler InventoryHandler => inventoryHandler;
+    public float ThrowPower => throwPower;
 
     readonly HashSet<object> _inputBlockingObjects = new HashSet<object>();
+    readonly List<AInteractable> _interactablesInRange = new List<AInteractable>();
 
     private void Update()
     {
@@ -31,18 +37,28 @@ public class PlayerController : MonoBehaviour
                     InventoryUI.SetActive(false);
                 }
             }
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
-            foreach (Collider2D collider in colliders)
+
+            if(_interactablesInRange.Count>0)
             {
-                if (collider.TryGetComponent(out Collectable component))
+                var pos = transform.position;
+                var closestInteractable = _interactablesInRange[0];
+                var closestInteractableDist = (_interactablesInRange[0].transform.position - pos).sqrMagnitude;
+
+                for(var i=0; i< _interactablesInRange.Count; i++)
                 {
-                    collect_PopUp.gameObject.SetActive(true);
-                    if (Input.GetKeyDown(pickUp))
+                    var dist = (_interactablesInRange[i].transform.position - pos).sqrMagnitude;
+                    if(dist< closestInteractableDist)
                     {
-                        inventoryHandler.AddToInventory(component.GetSO());
-                        dialogBox.ShowDialog("You acuired half a joke!");
-                        component.gameObject.SetActive(false);
+                        closestInteractableDist = dist;
+                        closestInteractable = _interactablesInRange[i];
                     }
+                }
+
+                collect_PopUpLabel.text = closestInteractable.UILabel;
+                collect_PopUp.gameObject.SetActive(true);
+                if (Input.GetKeyDown(pickUp))
+                {
+                    closestInteractable.Interact(this);
                 }
             }
         }
@@ -69,6 +85,25 @@ public class PlayerController : MonoBehaviour
         if (!_inputBlockingObjects.Remove(key))
         {
             throw new System.Exception("Can't remove key " + key.ToString());
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var interactable = collision.GetComponentInParent<AInteractable>();
+
+        if (interactable)
+        {
+            _interactablesInRange.Add(interactable);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        var interactable = collision.GetComponentInParent<AInteractable>(true);
+        if (interactable)
+        {
+            _interactablesInRange.Remove(interactable);
         }
     }
 }

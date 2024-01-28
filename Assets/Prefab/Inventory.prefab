@@ -1371,8 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AudioSource: {fileID: 807756345781491892}
-  ricochet:
-  - {fileID: 8300000, guid: bd3e0fb79bcf886499859e998461edbc, type: 3}
+  calculatorHandler: {fileID: 6316434775157101455}
 --- !u!114 &6316434775157101455
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,29 +11,34 @@ public class JokePieceSO : ScriptableObject{
         public  AudioClip clip; 
     }
     public String text;
-    private Dictionary<JokePieceSO, int>  _jokePiece_Points;
-    private Dictionary<JokePieceSO, AudioClip>  _jokePiece_Audio;
-
+    [SerializeField] AudioClip audio;
     [SerializeField] private List<ComboData> data;
+
+    private Dictionary<JokePieceSO, ComboData>  _jokePiece_data;
     public int GetScore(JokePieceSO so){
-        if(_jokePiece_Points == null){
+        if(_jokePiece_data == null){
             Generate();
         }
-        return _jokePiece_Points[so];
+        if(!_jokePiece_data.ContainsKey(so)) return 0;
+        return _jokePiece_data[so].score;
     }
     public AudioClip GetAudio(JokePieceSO so){
-        if(_jokePiece_Points == null){
+        if(_jokePiece_data == null){
             Generate();
         }
-        return _jokePiece_Audio[so];
+        return _jokePiece_data[so].clip;
     }
-    public Dictionary<JokePieceSO, int> Generate(){
-        _jokePiece_Points = new();
-        _jokePiece_Audio = new();
+    public Dictionary<JokePieceSO, ComboData> Generate(){
+        _jokePiece_data = new();
         for(int i = 0; i < data.Count; i++){
-            _jokePiece_Points.Add(data[i].compatiblePiece,data[i].score);
-            _jokePiece_Audio.Add(data[i].compatiblePiece,data[i].clip);
+            _jokePiece_data.Add(data[i].compatiblePiece,data[i]);
         }
-        return _jokePiece_Points;
+        return _jokePiece_data;
+    }
+    public bool HasScore(JokePieceSO so){
+        if(_jokePiece_data == null){
+            Generate();
+        }
+        return _jokePiece_data.ContainsKey(so);
     }
 }
