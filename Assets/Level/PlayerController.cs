@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] DialogBox dialogBox;
     [SerializeField] private string WalkAnimation;
     private Animator animator;
+    private bool looksLeft = true;
 
     float _speedBonus;
     void Awake(){
@@ -76,6 +77,9 @@ public class PlayerController : MonoBehaviour
             var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             animator.SetBool(WalkAnimation,input.normalized.magnitude > 0);
             rb.AddForce(input * (movementForce+ _speedBonus));
+            bool goesLeft = input.x < 0;
+            if(goesLeft) LookLeft();
+            else LookRight();
         }
     }
 
@@ -112,5 +116,21 @@ public class PlayerController : MonoBehaviour
         {
             _interactablesInRange.Remove(interactable);
         }
+    }
+    public void SwapLookDirection(){
+        looksLeft = !looksLeft;
+        Vector3 targetLook = transform.localScale;
+        targetLook.x *= -1; 
+        animator.transform.localScale = targetLook;
+    }
+    void LookLeft(){
+        Vector3 targetLook = transform.localScale;
+        targetLook.x = Mathf.Abs(targetLook.x); 
+        animator.transform.localScale = targetLook;
+    }
+    void LookRight(){
+        Vector3 targetLook = transform.localScale;
+        targetLook.x = -Mathf.Abs(targetLook.x); 
+        animator.transform.localScale = targetLook;
     }
 }
