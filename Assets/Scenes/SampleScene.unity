@@ -155,6 +155,10 @@ PrefabInstance:
       propertyPath: collect_PopUpLabel
       value: 
       objectReference: {fileID: 1058116920}
+    - target: {fileID: 4237342493046750463, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
     - target: {fileID: 6043611793098738462, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -196,6 +200,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6120103136744246419, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1153763716}
+    - target: {fileID: 7418899768875883904, guid: b410b550e2049f84193fa81dee88ea6c, type: 3}
       propertyPath: dialogBox
       value: 
       objectReference: {fileID: 1153763716}
