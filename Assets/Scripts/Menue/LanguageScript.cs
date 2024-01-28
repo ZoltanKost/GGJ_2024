@@ -10,8 +10,14 @@ public class LanguageScript : MonoBehaviour
     public Language CurrentLanguage
     { get => currentLanguage; set => currentLanguage = value; }
 
+    public static Language CurrentLanguageStatic
+    { get => _instance.currentLanguage; set => _instance.currentLanguage = value; }
+
+    static LanguageScript _instance;
+
     void Awake()
     {
+        _instance = this;
         DontDestroyOnLoad(gameObject);
     }
 }
