@@ -8403,7 +8403,7 @@ MonoBehaviour:
   collect_PopUpLabel: {fileID: 0}
   rb: {fileID: 1659489289074776188}
   movementForce: 330
-  pickUp: 101
+  pickUpButton: Action
   inventoryOpen: 105
   dialogBox: {fileID: 0}
   throwPower: 10
