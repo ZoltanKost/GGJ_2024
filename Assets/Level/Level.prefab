@@ -8452,8 +8452,8 @@ MonoBehaviour:
     y: -4
     width: 10
     height: 8
-  spawnDelayMin: 1
-  spawnDelayMax: 1
+  spawnDelayMin: 10
+  spawnDelayMax: 30
   prefab: {fileID: 8581970235856912027, guid: d7ad21c5fcde4784a8c41c934124cea6, type: 3}
 --- !u!1 &8297115098504557361
 GameObject:
