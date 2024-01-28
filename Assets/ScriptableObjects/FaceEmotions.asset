@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: FaceEmotions
   m_EditorClassIdentifier: 
   emotions:
-  - {fileID: 21300000, guid: b792ababb6fd4b640bba85c9fa70a050, type: 3}
-  - {fileID: 21300000, guid: 73b479f4aa006f6459abf0294e8fd764, type: 3}
-  - {fileID: 21300000, guid: 9e8df95e08267ef4594e0c7f08c0e17e, type: 3}
-  - {fileID: 21300000, guid: 175dd4a1114760140a20f45f1bd092c0, type: 3}
-  - {fileID: 21300000, guid: bec46c935ad0a0d4193eca0fe25be08f, type: 3}
-  - {fileID: 21300000, guid: a452f35ce9fc7074ab996fa2f44579c9, type: 3}
-  - {fileID: 21300000, guid: 13bc9f704c8e29e49b3b5d5d20441ce5, type: 3}
-  - {fileID: 21300000, guid: 52487cc21d5d38a42ba2bb4437db7cdb, type: 3}
-  - {fileID: 21300000, guid: c782fb01ae7c189459f875496a24f46c, type: 3}
-  - {fileID: 21300000, guid: eed07438b71f31249a808455364c3a8c, type: 3}
-  - {fileID: 21300000, guid: a423ea6d95b95ec4c8f6ff1af01a4427, type: 3}
+  - {fileID: -369946618, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 1327034887, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: -781412761, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 1621955134, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 181343988, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 640843029, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: -1991969765, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 1302207676, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: -1483352249, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 804887072, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}
+  - {fileID: 566263006, guid: 6c11b6f59b53d3d4091f734aed57ab30, type: 3}

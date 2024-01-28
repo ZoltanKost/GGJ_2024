@@ -24,7 +24,7 @@ MonoBehaviour:
     clipGerman: {fileID: 8300000, guid: 7ca401e9334cacb4385843526667cb45, type: 3}
     clipEnglish: {fileID: 8300000, guid: 412c0f2d642e87f41892b5a27ae8695b, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
-    score: 0
+    score: 20
     clipGerman: {fileID: 8300000, guid: 315370dfdbf9d58449215a7ea1ddc752, type: 3}
     clipEnglish: {fileID: 8300000, guid: 5cdc5568f64250d449ec98cf36016b26, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: fb43438fe9e72e34f90091b5ebf4a1a6, type: 2}
