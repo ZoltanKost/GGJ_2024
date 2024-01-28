@@ -55,6 +55,7 @@ public class InventoryHandler : MonoBehaviour
 
     void UnassignAllFooterJokes()
     {
+        return;
         foreach (var f in Calculator_Footer)
         {
             if (f.occupied)
