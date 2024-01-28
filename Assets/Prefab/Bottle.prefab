@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 51925585787844641}
   - component: {fileID: 5004837362054632942}
+  - component: {fileID: 1744104699833493912}
+  - component: {fileID: 7070950458452491059}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -84,3 +86,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1744104699833493912
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034340031758536559}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffbb5ed5c8b4d8d468e92d9eb96b4fc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7070950458452491059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034340031758536559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653e4de8f7601a049a13e091aaa8af53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JokePieceSO: {fileID: 11400000, guid: 5c5331ce5dc21004d854fe6a52daed24, type: 2}
+  dialogBox: {fileID: 0}
+  anim: {fileID: 0}
