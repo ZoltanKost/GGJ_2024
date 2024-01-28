@@ -13,8 +13,8 @@ public class GameEndSequence : MonoBehaviour
 
         public string Text => LanguageScript.CurrentLanguageStatic switch
         {
-            Language.German => english,
-            Language.Englisch => german,
+            Language.German => german,
+            Language.Englisch => english,
             _ => throw new NotImplementedException(),
         };
     }
@@ -49,6 +49,7 @@ public class GameEndSequence : MonoBehaviour
         playerController.BlockInput(blockerKey);
         objectToDisableWhenEndingStarts.gameObject.SetActive(false);
         await dialogBox.ShowDialogWithTask(text1.Text);
+        faceImage.sprite = emotions.GetEmotion(jokeMeter.Progress);
         var endText = resultTexts[Mathf.RoundToInt(Mathf.Clamp(jokeMeter.Progress,0f,1f)) * resultTexts.Length];
         faceAnimationDirector.gameObject.SetActive(true);
         faceAnimationDirector.Play();
