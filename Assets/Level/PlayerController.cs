@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] string pickUpButton;
     [SerializeField] KeyCode inventoryOpen;
     [SerializeField] DialogBox dialogBox;
+    [SerializeField] private string WalkAnimation;
+    private Animator animator;
 
     float _speedBonus;
+    void Awake(){
+        animator = GetComponentInChildren<Animator>();
+    }
 
     internal void AddSpeedBonus(float speedBonusAmount)
     {
@@ -68,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (_inputBlockingObjects.Count == 0)
         {
             var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            animator.SetBool(WalkAnimation,input.normalized.magnitude > 0);
             rb.AddForce(input * (movementForce+ _speedBonus));
         }
     }
