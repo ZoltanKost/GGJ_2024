@@ -32,6 +32,10 @@ MonoBehaviour:
     clipGerman: {fileID: 8300000, guid: 51df95492c7a86343a11c843168ce0ee, type: 3}
     clipEnglish: {fileID: 8300000, guid: 3022ec7b18b717f41aea65d022f52300, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 90c4289241636ef4ab6fa343d51e7201, type: 2}
+<<<<<<< HEAD
     score: 10
+=======
+    score: 20
+>>>>>>> origin/main
     clipGerman: {fileID: 8300000, guid: fc4f7cfa409ab7d44907f2b262c059c7, type: 3}
     clipEnglish: {fileID: 8300000, guid: b8af9783eb982594db280528e5f2d5ee, type: 3}

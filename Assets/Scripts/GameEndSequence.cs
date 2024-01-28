@@ -50,7 +50,7 @@ public class GameEndSequence : MonoBehaviour
         objectToDisableWhenEndingStarts.gameObject.SetActive(false);
         await dialogBox.ShowDialogWithTask(text1.Text);
         faceImage.sprite = emotions.GetEmotion(jokeMeter.Progress);
-        var endText = resultTexts[Mathf.RoundToInt(Mathf.Clamp(jokeMeter.Progress,0f,1f)) * resultTexts.Length];
+        var endText = resultTexts[Mathf.RoundToInt(Mathf.Clamp(jokeMeter.Progress,0f,1f) *( resultTexts.Length-1))];
         faceAnimationDirector.gameObject.SetActive(true);
         faceAnimationDirector.Play();
         faceAnimationDirector.stopped += OnStopped;

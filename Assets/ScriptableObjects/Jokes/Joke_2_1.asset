@@ -20,7 +20,11 @@ MonoBehaviour:
     clipGerman: {fileID: 8300000, guid: 85115a180e7fd1a43a112201fbcc3981, type: 3}
     clipEnglish: {fileID: 8300000, guid: b7dff1a4308751b4d90fba7186b80c46, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 8006eb31610ad1245b38ddc1d51a140c, type: 2}
+<<<<<<< HEAD
     score: 10
+=======
+    score: 20
+>>>>>>> origin/main
     clipGerman: {fileID: 8300000, guid: a022a3d2892b3044689b89a272a73e47, type: 3}
     clipEnglish: {fileID: 8300000, guid: a022a3d2892b3044689b89a272a73e47, type: 3}
   - compatiblePiece: {fileID: 11400000, guid: 2d0ef443daca9fa46b51e0136eaa7b1f, type: 2}
